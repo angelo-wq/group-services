@@ -1,0 +1,172 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scrollbar-width: none;
+	font-family: sans-serif;
+}
+
+*::selection {
+	background: #5fd2fc;
+	color: black;
+}
+
+body {
+	background: linear-gradient(320deg, #6b94ce, #b4bfd6);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.navbar {
+	position: sticky;
+	top: 0;
+	background: #9f3739;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	padding: 4px;
+	z-index: 999;
+	animation: navbar linear both;
+	animation-timeline: scroll(root block);
+	animation-range: 0 100px;
+}
+
+@keyframes navbar {
+	to {
+		background: rgba(158, 55, 57, 0.4);
+		backdrop-filter: blur(4px);
+	}
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	font-family: fantasy;
+	font-size: 18px;
+	transition: all 0.4s ease-in-out;
+}
+
+a:hover {
+	text-shadow: 0 0 10px white;
+	transform: scale(1.2);
+}
+
+.logo {
+	width: 50px;
+	height: 50px;
+	scale: 1.2;
+}
+
+.progress {
+	position: fixed;
+	bottom: 0;
+	z-index: 55;
+	width: 100%;
+	height: 3px;
+	border-radius: 10px;
+	background: #093b86;
+	animation: range 1s linear both;
+	animation-timeline: scroll(root);
+}
+
+@keyframes range {
+	from {
+		width: 0;
+	}
+	to {
+		width: 100%;
+	}
+}
+
+main {
+	display: block;
+	margin: 30px auto;
+	padding: 25px;
+	width: 60%;
+	padding-bottom: 100px;
+}
+
+h1 {
+	font-size: 64px;
+	font-family: sans-serif;
+	text-align: center;
+}
+
+h4 {
+	opacity: 60%;
+}
+
+.box {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+h2 {
+	animation: fadeIn 1s linear both;
+	animation-timeline: view();
+	animation-range: entry 0% cover 20%;
+}
+
+@keyframes fadeIn {
+	from {
+		transform: scale(0.7) translateX(120px);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1) translateX(0);
+		opacity: 1;
+	}
+}
+
+h4 {
+	animation: fadeInh4 1s linear both;
+	animation-timeline: view();
+	animation-range: entry 0% cover 20%;
+}
+
+@keyframes fadeInh4 {
+	from {
+		transform: scale(0.7) translateX(120px);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1) translateX(0);
+		opacity: 60%;
+	}
+}
+
+.linear {
+	margin-top: 7px;
+	border-radius: 7px;
+	width: 100%;
+	background: #093c87;
+	padding: 7px;
+	color: white;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 600px) {
+	.logo {
+		display: none;
+	}
+	.navbar {
+		padding: 10px;
+	}
+
+	a {
+		cursor: none;
+	}
+	main {
+		width: 100%;
+	}
+}

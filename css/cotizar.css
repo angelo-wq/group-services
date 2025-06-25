@@ -1,0 +1,93 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scrollbar-width: none;
+	font-family: sans-serif;
+}
+
+*::selection {
+	background: #5fd2fc;
+}
+
+body {
+	background: linear-gradient(320deg, #6b94ce, #b4bfd6);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-bottom: 100px;
+}
+
+header {
+	position: sticky;
+	top: 0;
+	background: #9f3739;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 7px;
+	z-index: 999;
+	animation: navbar linear both;
+	animation-timeline: scroll(root block);
+	animation-range: 0 100px;
+}
+
+@keyframes navbar {
+	to {
+		background: rgba(158, 55, 57, 0.4);
+		backdrop-filter: blur(4px);
+	}
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	font-family: fantasy;
+	font-size: 18px;
+}
+
+i {
+	font-size: 40px;
+	cursor: pointer;
+}
+
+h1 {
+	font-size: 44px;
+}
+
+main {
+	display: flex;
+	flex-direction: column;
+	margin: 30px auto;
+	gap: 20px;
+	padding: 25px;
+	width: 60%;
+	background: linear-gradient(320deg, #b4bfd6, #6b94ce);
+	border-radius: 30px;
+	box-shadow: 0 0 12px rgba(0, 0, 0, .4);
+}
+
+label {
+	text-align: center;
+}
+
+input, textarea, select, button {
+	padding: 7px;
+	border-radius: 7px;
+	outline: none;
+	border: 0;
+	width: 60%;
+	display: block;
+	margin: auto;
+}
+
+button {
+	cursor: pointer;
+	transition: all 1s ease;
+	&:hover {
+		background: #093c87;
+		color: white;
+	}
+}

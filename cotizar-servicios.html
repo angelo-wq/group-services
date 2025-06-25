@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cotización de Servicios</title>
+	<link rel="icon" href="icon_web.png">
+	<link rel="stylesheet" href="css/cotizar.css">
+	<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/3.0.0/uicons-solid-rounded/css/uicons-solid-rounded.css'>
+</head>
+<body>
+
+	<header>
+		<i onclick="history.back()" class="fi fi-sr-caret-square-left"></i>
+		<h1>Cotizar</h1>
+	</header>
+	
+	<main>
+		<label for="name">Nombre:</label>
+		<input placeholder="Tu nombre..." type="text" name="name" id="name" autocomplete="off">
+		<label for="selection">Selecciona el servicio a cotizar:</label>
+		<select name="selection" id="selection">
+			<option value="--Selecciona el Servicio--" disabled selected>--Selecciona el Servicio--</option>
+			<option value="Mantenimiento Integral">Mantenimiento Integral</option>
+			<option value="Limpieza y Conservación">Limpieza y Conservación</option>
+			<option value="Seguridad y Vigilancia">Seguridad y Vigilancia</option>
+			<option value="Logística y Apoyo Operativo">Logística y Apoyo Operativo</option>
+		</select>
+		<label for="msg">Mensaje:</label>
+		<textarea placeholder="Tu Mensaje Aquí..." name="msg" id="msg" autocomplete="off" rows="5" cols="25"></textarea>
+		<button id="send" onclick="send()">Enviar</button>
+	</main>
+
+
+	<script src="js/main.js"></script>
+</body>
+</html>

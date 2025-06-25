@@ -1,0 +1,109 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	scrollbar-width: none;
+	font-family: sans-serif;
+}
+
+*::selection {
+	background: #5fd2fc;
+}
+
+body {
+	background: linear-gradient(320deg, #6b94ce, #b4bfd6);
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+	padding-bottom: 100px;
+}
+
+header {
+	position: sticky;
+	top: 0;
+	background: #9f3739;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 7px;
+	z-index: 999;
+	animation: navbar linear both;
+	animation-timeline: scroll(root block);
+	animation-range: 0 100px;
+}
+
+@keyframes navbar {
+	to {
+		background: rgba(158, 55, 57, 0.4);
+		backdrop-filter: blur(4px);
+	}
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	font-family: fantasy;
+	font-size: 18px;
+}
+
+i {
+	font-size: 40px;
+	cursor: pointer;
+}
+
+h1 {
+	font-size: 44px;
+}
+
+main {
+	display: block;
+	margin: 30px auto;
+	padding: 25px;
+	width: 40%;
+}
+
+h2 {
+	text-align: center;
+}
+
+h4 {
+	opacity: 60%;
+}
+
+.box {
+	margin-top: 20px;
+	display: flex;
+	flex-direction: column;
+	gap: 40px;
+}
+
+h4, h2, ul, li {
+	animation: fadeIn 1s linear both;
+	animation-timeline: view();
+	animation-range: entry 0% cover 20%;
+}
+
+@keyframes fadeIn {
+	from {
+		transform: scale(0.7) translateX(120px);
+		opacity: 0;
+	}
+	to {
+		transform: scale(1) translateX(0);
+		opacity: 1;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	header {
+		padding: 10px;
+	}
+	i {
+		cursor: none;
+	}
+	main {
+		width: 100%;
+	}
+}
